@@ -19,8 +19,8 @@
 
 # Documentação
 
-[Link para os documentos do projeto](doc/documentacao.md)
+[Link para os documentos do projeto](docs/documentacao.md)
 
 # Manual da Desenvolvedor
 
-[Orientações para os desenvolvedores do projeto](doc/guia-ds/guia.md)
+[Orientações para os desenvolvedores do projeto](docs/guia-ds/guia.md)

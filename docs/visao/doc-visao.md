@@ -26,6 +26,8 @@ O IFreela tem como objetivo conectar alunos do IFRN, que desejam aplicar seus co
 | Aluno | Estudante que deseja aplicar seus conhecimento sem projetos reais | Criar perfil, ofertar serviços, negociar prazos e valores, executar os projetos contratados | 
 | Contratante | Pessoa física, pequeno negócio ou empresa local que busca soluções rápidas, acessíveis e de qualidade para demandas pontuais | Cadastrar demandas, selecionar alunos, contratar serviços e avaliar entregas |
 | Administrador | Responsável por gerenciar o ambiente, garantir segurança e qualidade da interação entre alunos e contratantes | Moderar usuários, validar informações, acompanhar métricas e resolver problemas técnicos/operacionais |
+| Visitante | Usuário não registrado que acessa a plataforma apenas para explorar informações públicas | Visualizar informações sobre o IFreelas e navegar por serviços de forma limitada |
+
 
 ## 4. Descrição do ambiente dos usuários
 
@@ -34,6 +36,7 @@ O IFreela tem como objetivo conectar alunos do IFRN, que desejam aplicar seus co
 | Aluno | Acessa a plataforma principalmente pelo computador pessoal | 
 | Contratante | Utiliza a plataforma em seu local de trabalho ou em casa, geralmente buscando agilidade | 
 | Administrador | Acessa via computador, em um painel administrativo restrito |
+| Visitante | Acessa via celular ou computador, geralmente em busca de informações iniciais antes de se cadastrar |
 
 ## 5. Principais necessidades dos usuários
 
@@ -42,6 +45,7 @@ O IFreela tem como objetivo conectar alunos do IFRN, que desejam aplicar seus co
 | Aluno | Interface clara para cadastrar perfil, divulgar serviços, receber propostas, gerenciar negociações e acompanhar o andamento dos projetos |
 | Contratante | Facilidade para cadastrar demandas, encontrar alunos com o perfil adequado, contratar e acompanhar o progresso dos serviços | 
 | Administrador | Ferramentas para monitorar usuários, validar cadastros, moderar interações, resolver disputas e acompanhar métricas de uso | 
+| Visitante | Acesso a informações sobre a plataforma, visualização parcial de serviços e incentivo para realizar cadastro |
 
 
 ## 6. Alternativas concorrentes

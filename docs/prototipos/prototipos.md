@@ -9,6 +9,7 @@ flowchart TD
         A --> C["/logar"]
         A --> D["/registrar"]
         A --> B["/demandas"]
+        B --> G["/[id]"]
         A --> E["/servicos"]
         A --> F["/aluno/[id]"]
     end
@@ -45,6 +46,7 @@ flowchart TD
 
     end
 ```
+
 
 
 

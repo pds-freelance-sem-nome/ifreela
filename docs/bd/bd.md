@@ -2,11 +2,11 @@
 
 ## Diagrama ER
 
-![Diagrama](<>)
+![ER](er-0.0.1.png)
 
 ## Modelo Relacional
 
-![Diagrama](<>)
+![RELACIONAL](relacional-0.0.1.png)
 
 # 📖 Dicionário de Dados
 

@@ -1,6 +1,6 @@
 # <img src="logo.png"/>
 
-O IFreela é a plataforma de freelancing, desenvolvida para criar pontes diretas entre o talento dos alunos do IFRN e as necessidades do mercado.
+O ifreela é a plataforma de freelancing, desenvolvida para criar pontes diretas entre o talento dos alunos do IFRN e as necessidades do mercado.
 
 Nossa missão é dupla: oferecer aos contratantes acesso qualificado a profissionais em formação para projetos de pequeno e médio porte, enquanto proporcionamos aos alunos do IFRN oportunidades reais de trabalho, experiência prática no currículo e visibilidade profissional desde cedo.
 

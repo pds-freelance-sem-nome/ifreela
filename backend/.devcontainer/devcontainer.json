@@ -1,0 +1,16 @@
+{
+  "name": "IFreela Dev",
+  "dockerFile": "Dockerfile",
+  "runArgs": ["--network=host"],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "pivotal.vscode-spring-boot",
+        "mhutchie.git-graph",
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  },
+  "postCreateCommand": "mvn clean install && mvn spring-boot:run"
+}

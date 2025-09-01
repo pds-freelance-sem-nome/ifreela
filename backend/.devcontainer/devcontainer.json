@@ -1,7 +1,11 @@
 {
-  "name": "IFreela Dev",
-  "dockerFile": "Dockerfile",
-  "runArgs": ["--network=host"],
+  "name": "ifreela API",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "runArgs": ["--name","ifreela-api","-p","8000:8000","--network=host"],
+  "forwardPorts": [8000],
   "customizations": {
     "vscode": {
       "extensions": [
@@ -12,5 +16,6 @@
       ]
     }
   },
-  "postCreateCommand": "mvn clean install && mvn spring-boot:run"
+  "postCreateCommand": "mvn clean install -DskipTests -f api/pom.xml",
+  "postStartCommand": "mvn spring-boot:run -f api/pom.xml"
 }

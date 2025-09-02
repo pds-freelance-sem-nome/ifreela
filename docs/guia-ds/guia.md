@@ -3,6 +3,8 @@
 **Histórico de Alterações:**
 | Versão | Autor | Data |
 |--------|-------|------|
+| 0.0.1 | [@pedrohcdsouza](https://github.com/pedrohcdsouza) | 02/09/2025 |
+
 
 # Projeto de Desenvolvimento de Sistemas Web
 
@@ -17,10 +19,32 @@
 
 1. Antes de iniciar os trabalhos, o projeto precisa ser clonado na máquina local. Para tanto é necessário que o processo de configuração das chaves SSH tenha ocorrido anteriormente;
 ~~~shell
-$ git clone https://github.com/tads-cnat/exemplo.git
+$ git clone https://github.com/tads-cnat/ifreela
 ~~~
 
-## C. Fluxo ao Ser Atribuído em Tarefas
+## C. Utilizando o DevContainer
+
+O projeto está configurado para utilizar **Dev Containers** no VS Code. Isso garante que todos os desenvolvedores utilizem o mesmo ambiente padronizado.
+
+### Como abrir o **Backend** no DevContainer
+1. Abra o VS Code.
+2. Vá em **File > Open Folder** e selecione a pasta `backend/`.
+3. O VS Code detectará o arquivo `.devcontainer/devcontainer.json` e perguntará se deseja **Reopen in Container**. Clique nessa opção.
+4. O VS Code criará o container do backend e abrirá o ambiente configurado.
+5. O banco de dados **Postgres** será iniciado automaticamente via `docker-compose`.
+
+### Como abrir o **Frontend** no DevContainer
+1. Abra o VS Code.
+2. Vá em **File > Open Folder** e selecione a pasta `frontend/`.
+3. O VS Code detectará o arquivo `.devcontainer/devcontainer.json` (se configurado) e perguntará se deseja **Reopen in Container**. Clique nessa opção.
+4. O VS Code criará o container do frontend e abrirá o ambiente configurado.
+5. O frontend se comunicará com o backend já rodando no ambiente.
+
+> 📌 **Observação:** Não é necessário subir manualmente banco ou containers adicionais, pois o `docker-compose.yml` já orquestra o **backend**, **frontend** e **postgres**.
+
+---
+
+## D. Fluxo ao Ser Atribuído em Tarefas
 
 1. Uma nova tarefa é atribuída a um desenvolvedor;
 1. O desenvolvedor lê a tarefa e solicita possíveis esclarecimentos ao gerente a partir de comentários na tarefa, marcando o gerente;
@@ -33,7 +57,7 @@ $ git clone https://github.com/tads-cnat/exemplo.git
 1. Ao final do trabalho o *Pull Request* é sinalizado que não trata-se de um rascunho (*draft*);
 1. O gerente integra o resultado do trabalho (contido na *branch* de trabalho) à *branch* princial (*main*).
 
-## D. Passos do Trabalho Diário com o Git
+## E. Passos do Trabalho Diário com o Git
 
 - Inicialmente, o repositório local DEVE ser sincronizado com as possíveis novidades do repositório remoto (*origin*);
 ~~~shell
@@ -89,7 +113,7 @@ flowchart TD
     se2 -->|sim| merge
 ```
 
-## E. Fluxo de Commits
+## F. Fluxo de Commits
 
 1. Para manter a organização e a legibilidade do histórico de alterações, será adotado um padrão de mensagens nos commits do projeto. <br> A estrutura recomendada é
 ```
@@ -118,13 +142,13 @@ Exemplo:
 git commit -m "Remove: Delete old registration component"
 ```
 
-## F. Implantação
+## G. Implantação
 
 A implantação incial da aplicação será na plataforma Pythonanywhere (conta Beginner - gratúita).
 
 Informações:
-- Usuário: **achieve**
-- Senha: **4ch13v3P4ss**
+- Usuário: ****
+- Senha: ****
 - A mesma senha é utilizada para a chave SSH gerada no Pythonanywhere para conexão ao GitHub
 - Link para login: https://www.pythonanywhere.com/login/
 - Link para a aplicação publicada: https://achieve.pythonanywhere.com/

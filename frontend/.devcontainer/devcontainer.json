@@ -1,0 +1,40 @@
+{
+  "name": "IFreela Frontend",
+  "build": {
+    "dockerfile": "../Dockerfile",
+    "context": ".."
+  },
+  "containerEnv": {
+    "CHOKIDAR_USEPOLLING": "true"
+  },
+  "forwardPorts": [3000, 9229],
+  "postCreateCommand": "yarn install && sudo chown -R $(whoami) .next node_modules",
+  "postStartCommand": "yarn dev",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "[javascript]": {
+          "editor.defaultFormatter": "biomejs.biome"
+        },
+        "[javascriptreact]": {
+          "editor.defaultFormatter": "biomejs.biome"
+        },
+        "[typescript]": {
+          "editor.defaultFormatter": "biomejs.biome"
+        },
+        "[typescriptreact]": {
+          "editor.defaultFormatter": "biomejs.biome"
+        },
+        "editor.formatOnSave": true
+      },
+      "extensions": [
+        "biomejs.biome",
+        "eamodio.gitlens",
+        "bradlc.vscode-tailwindcss",
+        "github.vscode-github-actions"
+      ]
+    }
+  },
+  "remoteUser": "node"
+}

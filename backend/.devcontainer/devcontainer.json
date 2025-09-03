@@ -13,10 +13,6 @@
 
   "forwardPorts": [8080, 5005],
 
-  "containerEnv": {
-    "JAVA_TOOL_OPTIONS": "-XX:+UseContainerSupport -Xmx1g"
-  },
-
   "postCreateCommand": "./mvnw clean install -DskipTests",
 
   "customizations": {

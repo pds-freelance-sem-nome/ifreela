@@ -17,7 +17,7 @@ export function Button({
     case 'outline':
       baseClassName = twJoin(
         baseClassName,
-        'bg-transparent border-1 border-white',
+        'bg-transparent border-1 border-black',
       );
       break;
     default:

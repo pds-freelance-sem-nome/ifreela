@@ -1,5 +1,6 @@
-import { Column, Entity, OneToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, OneToMany, OneToOne, PrimaryGeneratedColumn } from "typeorm";
 import { Perfil } from "./perfil.entity";
+import { Feedback } from "src/modules/feedback/feedback.entity";
 
 @Entity('usuario')
 export class Usuario {
@@ -30,5 +31,8 @@ export class Usuario {
 
     @OneToOne( () => Perfil, perfil => perfil.usuario )
     perfil: Perfil;
+
+    @OneToMany( () => Feedback, feedback => feedback.usuario )
+    feedbacks: Feedback[];
 
 }

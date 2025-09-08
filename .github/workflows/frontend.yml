@@ -6,11 +6,13 @@ on:
       - main
     paths:
       - 'frontend/**'
+      - '.github/workflows/frontend.yml'
   pull_request:
     branches:
       - main
     paths:
       - 'frontend/**'
+      - '.github/workflows/frontend.yml'
 
 jobs:
   build:
@@ -28,10 +30,13 @@ jobs:
           cache-dependency-path: 'frontend/yarn.lock'
 
       - name: Install dependencies
+        working-directory: ./frontend
         run: yarn install
 
       # - name: Run tests
+      #   working-directory: ./frontend
       #   run: yarn test --ci --coverage
 
       - name: Build project
+        working-directory: ./frontend
         run: yarn build

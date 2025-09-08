@@ -1,3 +1,6 @@
+import { Footer } from '@/components/Footer';
+import { Header } from '@/components/Header';
+
 export default function publicLayout({
   children,
 }: Readonly<{
@@ -5,9 +8,9 @@ export default function publicLayout({
 }>) {
   return (
     <>
-      <header>header</header>
-      <main>{children}</main>
-      <footer>footer</footer>
+      <Header isPortal />
+      <main className="flex flex-1 mt-[145px] px-20">{children}</main>
+      <Footer />
     </>
   );
 }

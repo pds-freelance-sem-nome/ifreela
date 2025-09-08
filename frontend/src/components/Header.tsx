@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/Button';
+import { PiUserFill } from 'react-icons/pi';
 
 interface HeaderProps {
   isPortal?: boolean;
@@ -28,11 +29,11 @@ export function HeaderNav({ isPortal }: { isPortal?: boolean }) {
 
 export function Header({ isPortal }: HeaderProps) {
   return (
-    <header className="flex justify-between items-center px-20 py-12">
+    <header className="flex justify-between items-center px-20 py-12 fixed w-full">
       <Image src="/logo.svg" alt="Logo" width={200} height={48} />
       <HeaderNav isPortal={isPortal} />
       <div className="flex space-x-3">
-        <Button variant="outline">Entrar</Button>
+        <Button variant="outline"><PiUserFill size={24} />Entrar</Button>
         <Button>Cadastrar</Button>
       </div>
     </header>

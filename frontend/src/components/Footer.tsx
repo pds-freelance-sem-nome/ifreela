@@ -4,7 +4,7 @@ import React from 'react';
 
 export function Footer() {
   return (
-    <footer className="flex justify-between items-center px-20 py-18 bg-primary">
+    <footer className="flex justify-between items-center px-20 py-12 bg-primary">
       <div className=" flex flex-col gap-4 max-w-[600px]">
         <Image
           src="/logo-white.svg"

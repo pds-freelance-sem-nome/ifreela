@@ -1,10 +1,11 @@
-import { Column, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { Usuario } from "../usuario/entities/usuario.entity";
 
+@Entity('feedback')
 export class Feedback {
 
-    @PrimaryGeneratedColumn()
-    id: number;
+    @PrimaryGeneratedColumn('uuid')
+    id: string;
 
     @Column()
     nota: number;
@@ -12,10 +13,10 @@ export class Feedback {
     @Column()
     comentario: string;
 
-    @Column()
+    @ManyToOne(() => Usuario)
     remetente: Usuario;
 
-    @ManyToOne( () => Usuario, usuario => usuario.feedbacks )
-    usuario: Usuario;
+    @ManyToOne(() => Usuario, usuario => usuario.feedbacks)
+    destinatario: Usuario;
 
 }

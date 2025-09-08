@@ -5,8 +5,8 @@ import { Feedback } from "src/modules/feedback/feedback.entity";
 @Entity('usuario')
 export class Usuario {
 
-    @PrimaryGeneratedColumn()
-    id: number;
+    @PrimaryGeneratedColumn('uuid')
+    id: string;
 
     @Column()
     username: string;
@@ -32,7 +32,7 @@ export class Usuario {
     @OneToOne( () => Perfil, perfil => perfil.usuario )
     perfil: Perfil;
 
-    @OneToMany( () => Feedback, feedback => feedback.usuario )
+    @OneToMany( () => Feedback, feedback => feedback.remetente )
     feedbacks: Feedback[];
 
 }

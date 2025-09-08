@@ -1,6 +1,7 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, OneToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Perfil } from "./perfil.entity";
 
-@Entity('usuarios')
+@Entity('usuario')
 export class Usuario {
 
     @PrimaryGeneratedColumn()
@@ -26,5 +27,8 @@ export class Usuario {
 
     @Column({default: false})
     verificado: boolean;
+
+    @OneToOne( () => Perfil, perfil => perfil.usuario )
+    perfil: Perfil;
 
 }

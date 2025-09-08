@@ -12,3 +12,15 @@ RUN echo "node ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/node
 USER node
 
 WORKDIR /home/node/app
+
+COPY --chown=node:node package.json yarn.lock* ./
+
+RUN yarn install --frozen-lockfile
+
+COPY --chown=node:node . .
+
+RUN yarn build
+
+EXPOSE 8080
+
+CMD ["yarn", "start:prod"]

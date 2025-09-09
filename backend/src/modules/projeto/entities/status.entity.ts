@@ -1,7 +1,7 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity('categoria')
-export class Categoria {
+@Entity('status')
+export class Status {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
@@ -9,5 +9,5 @@ export class Categoria {
   nome: string;
 
   @Column()
-  cor: string;
+  ordem: number;
 }
